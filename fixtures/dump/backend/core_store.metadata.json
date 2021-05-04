@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"backend.core_store"}],"uuid":"8097a92cbced4fa89793328076faf84b"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"1e89b6acaa824a3ea2e17ea94e868ee5","collectionName":"core_store"}
