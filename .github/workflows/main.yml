@@ -25,12 +25,12 @@ jobs:
       
       - name: Install MongoDB Tools
         run: | 
-          apt update
-          apt install -y wget gnupg2
-          wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
-          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-          apt update
-          apt install -y mongodb-org-tools
+          sudo apt update
+          sudo apt install -y wget gnupg2
+          sudo wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+          sudo echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+          sudo apt update
+          sudo apt install -y mongodb-org-tools
           
       - name: Load Fixtures
         env: 
@@ -40,4 +40,4 @@ jobs:
           DUMP=$( cd ./fixtures/dump/smartrisk; pwd -P )
           echo -e "Loading fixtures in database \n\n"
           echo $DUMP
-          mongorestore $DUMP --uri $DB_URI --db ${2:-smartrisk} --drop
+          sudo mongorestore $DUMP --uri $DB_URI --db ${2:-smartrisk} --drop
