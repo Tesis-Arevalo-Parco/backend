@@ -8,7 +8,7 @@ URI=${1:-${DB_DEVELOPMENT_URI:-mongodb://localhost:27017}}
 
 rm -fr ./fixtures/dump
 
-mongodump -d backend --out ./fixtures/dump
+mongodump -d smartrisk --out ./fixtures/dump
 
 pwd -P
 

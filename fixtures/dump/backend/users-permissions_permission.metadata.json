@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"backend.users-permissions_permission"}],"uuid":"ffdc0ae5c6c947e79f99306437f11162"}
