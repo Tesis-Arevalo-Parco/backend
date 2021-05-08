@@ -32,6 +32,9 @@ jobs:
           sudo apt update
           sudo apt install -y mongodb-org-tools
           
+      - name: Change DNS server
+        run: sed -i -e 's/nameserver 127.0.0.53/nameserver 8.8.8.8/g' /etc/resolv.conf
+          
       - name: Load Fixtures
         run: |
           set -e
