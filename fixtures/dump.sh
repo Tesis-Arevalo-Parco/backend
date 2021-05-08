@@ -6,6 +6,8 @@ echo "Copying dump..."
 
 URI=${1:-${DATABASE_URI:-mongodb://localhost:27017}}
 
+echo $URI
+
 rm -fr ./fixtures/dump
 
 mongodump -d smartrisk --out ./fixtures/dump
