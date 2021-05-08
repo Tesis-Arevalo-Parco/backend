@@ -36,5 +36,8 @@ jobs:
         env: 
           DB_URI: ${{ secrets.DATABASE_URI }}
         run: |
-          echo $DATABASE_URI
-          bash ./fixtures/restore.sh $DATABASE_URI
+          set -e
+          DUMP=$( cd ./fixtures/dump/smartrisk; pwd -P )
+          echo -e "Loading fixtures in database \n\n"
+          mongorestore $DUMP --uri "$DATABASE_URI" --db ${2:-smartrisk} --drop
+          echo -e "\n\n FINISHED LOADING FIXTURES!"
