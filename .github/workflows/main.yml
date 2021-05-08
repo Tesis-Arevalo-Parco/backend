@@ -40,5 +40,5 @@ jobs:
           set -e
           DUMP=$( cd ./fixtures/dump/smartrisk; pwd -P )
           echo -e "Loading fixtures in database \n\n"
-          mongorestore $DUMP --uri ${{ secrets.DATABASE_URI }} --db smartrisk --drop
+          mongorestore $DUMP --uri ${{ secrets.DATABASE_URI }} -d smartrisk --drop
           echo -e "\n\n FINISHED LOADING FIXTURES!"
