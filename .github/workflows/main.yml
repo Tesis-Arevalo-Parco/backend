@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the develop branch
+  push:
+    branches:
+      - develop
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        run: git rev-parse --abbrev-ref HEAD
+      
+      - name: Install MongoDB Tools
+        run: | 
+          apt update
+          apt install -y wget gnupg2
+          wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+          apt update
+          apt install -y mongodb-org-tools
+          
+      - name: Load Fixtures
+        env: 
+          DB_URI: ${{ secrets.DB_URI }}
+        run: |
+          set -e
+          DUMP=$( cd ./fixtures/dump/smartrisk; pwd -P )
+          echo -e "Loading fixtures in database \n\n"
+          echo $DUMP
+          mongorestore $DUMP --uri $DB_URI --db ${2:-smartrisk} --drop
