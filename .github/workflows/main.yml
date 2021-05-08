@@ -35,4 +35,6 @@ jobs:
       - name: Load Fixtures
         env: 
           DB_URI: ${{ secrets.DATABASE_URI }}
-        run: bash ./fixtures/restore.sh $DATABASE_URI
+        run: |
+          echo $DATABASE_URI
+          bash ./fixtures/restore.sh $DATABASE_URI
