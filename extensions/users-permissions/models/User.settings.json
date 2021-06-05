@@ -64,6 +64,10 @@
     },
     "lastname": {
       "type": "string"
+    },
+    "projects": {
+      "via": "user",
+      "collection": "projects"
     }
   }
 }

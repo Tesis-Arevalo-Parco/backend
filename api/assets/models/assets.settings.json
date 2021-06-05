@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "name": "Activos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "identification": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "project": {
+      "via": "assets",
+      "model": "projects"
+    }
+  }
+}
