@@ -38,9 +38,7 @@ jobs:
       - name: Load Fixtures
         run: |
           set -e
+          DUMP=$( cd ./fixtures/dump/smartrisk; pwd -P )
           echo -e "Loading fixtures in database \n\n"
-          mongodump --out ./fixtures/dumpprod --uri "mongodb+srv://developer2:hello123@smartrisk.f81zq.mongodb.net/smartrisk?retryWrites=true&w=majority"
-          cd ./fixtures/dumpprod
-          ls
-          pwd
+          mongorestore $DUMP --db smartrisk --uri ${{ secrets.DATABASE_URI }}
           echo -e "\n\n FINISHED LOADING FIXTURES!"
