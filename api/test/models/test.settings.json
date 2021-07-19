@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "test",
+  "collectionName": "test2",
   "info": {
-    "name": "test"
+    "name": "test2",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,8 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "test": {
+    "test2": {
       "type": "string"
+    },
+    "testemsail": {
+      "type": "email"
     }
   }
 }
