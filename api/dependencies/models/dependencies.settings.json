@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dependencies",
+  "info": {
+    "name": "Dependencias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "activos": {
+      "collection": "assets",
+      "via": "dependencies"
+    }
+  }
+}
