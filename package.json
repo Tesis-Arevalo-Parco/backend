@@ -9,7 +9,9 @@
     "build": "strapi build",
     "strapi": "strapi",
     "load_fixtures": "bash ./fixtures/restore.sh",
-    "export_fixtures": "bash ./fixtures/dump.sh"
+    "load_users": "bash ./fixtures/restoreusers.sh",
+    "export_fixtures": "bash ./fixtures/dump.sh",
+    "export_users": "bash ./fixtures/dumpusers.sh"
   },
   "devDependencies": {},
   "dependencies": {
