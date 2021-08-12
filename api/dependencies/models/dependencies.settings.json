@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dependencies",
+  "info": {
+    "name": "Dependencies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "project": {
+      "via": "dependency",
+      "model": "projects"
+    },
+    "dependencies": {
+      "type": "json"
+    }
+  }
+}

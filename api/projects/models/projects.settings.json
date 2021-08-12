@@ -27,6 +27,10 @@
     "assets": {
       "collection": "assets",
       "via": "project"
+    },
+    "dependency": {
+      "model": "dependencies",
+      "via": "project"
     }
   }
 }
