@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "dependencies",
   "info": {
-    "name": "Dependencias",
+    "name": "Dependencies",
     "description": ""
   },
   "options": {
@@ -11,9 +11,12 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "activos": {
-      "collection": "assets",
-      "via": "dependencies"
+    "project": {
+      "via": "dependency",
+      "model": "projects"
+    },
+    "dependencies": {
+      "type": "json"
     }
   }
 }

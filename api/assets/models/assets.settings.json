@@ -23,10 +23,6 @@
     "project": {
       "via": "assets",
       "model": "projects"
-    },
-    "dependencies": {
-      "via": "activos",
-      "model": "dependencies"
     }
   }
 }

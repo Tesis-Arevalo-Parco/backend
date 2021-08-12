@@ -29,7 +29,8 @@
       "via": "project"
     },
     "dependency": {
-      "model": "dependencies"
+      "model": "dependencies",
+      "via": "project"
     }
   }
 }
