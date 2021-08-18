@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets-class-type",
+  "info": {
+    "name": "Catalogo Clases de Activos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "classTypes": {
+      "type": "json"
+    }
+  }
+}
