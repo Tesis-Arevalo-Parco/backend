@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "assets-class-type",
+  "collectionName": "catalogs",
   "info": {
-    "name": "Catalogo Clases de Activos",
+    "name": "Catalogos",
     "description": ""
   },
   "options": {
@@ -11,8 +11,14 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "classTypes": {
+    "catalog": {
       "type": "json"
+    },
+    "catalogName": {
+      "type": "string"
+    },
+    "catalogId": {
+      "type": "string"
     }
   }
 }

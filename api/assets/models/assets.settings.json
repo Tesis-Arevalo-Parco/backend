@@ -26,6 +26,21 @@
     },
     "classType": {
       "type": "json"
+    },
+    "availability": {
+      "type": "json"
+    },
+    "integrity": {
+      "type": "json"
+    },
+    "confidentiality": {
+      "type": "json"
+    },
+    "authenticity": {
+      "type": "json"
+    },
+    "traceability": {
+      "type": "json"
     }
   }
 }
