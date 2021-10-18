@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.upload_file"}],"uuid":"2ca02ef41b7b43218413d61fe892f647"}
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.upload_file"}],"uuid":"669df22ed8f9452dae521c25a5d1b644"}

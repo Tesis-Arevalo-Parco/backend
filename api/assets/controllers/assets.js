@@ -8,6 +8,12 @@ module.exports = {
             threats: assetsData?.threats || [],
             project: asset?.project.id,
             asset: asset?.id,
+            probability: [],
+            availability: [],
+            integrity: [],
+            confidentiality: [],
+            authenticity: [],
+            traceability: [],
         }) 
         return asset;
     },
