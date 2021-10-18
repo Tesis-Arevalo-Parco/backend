@@ -42,11 +42,9 @@
     "traceability": {
       "type": "json"
     },
-    "threats": {
-      "type": "json"
-    },
-    "vulnerabilities": {
-      "type": "json"
+    "threat": {
+      "model": "threats",
+      "via": "asset"
     }
   }
 }

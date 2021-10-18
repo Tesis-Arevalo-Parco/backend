@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "threats",
+  "info": {
+    "name": "Amenazas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "vulnerabilities": {
+      "type": "json"
+    },
+    "integrity": {
+      "type": "json"
+    },
+    "confidentiality": {
+      "type": "json"
+    },
+    "availability": {
+      "type": "json"
+    },
+    "authenticity": {
+      "type": "json"
+    },
+    "traceability": {
+      "type": "json"
+    },
+    "probability": {
+      "type": "json"
+    },
+    "threats": {
+      "type": "json"
+    },
+    "asset": {
+      "via": "threat",
+      "model": "assets"
+    },
+    "project": {
+      "model": "projects",
+      "via": "threat"
+    }
+  }
+}
