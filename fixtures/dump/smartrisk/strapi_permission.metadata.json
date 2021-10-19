@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.strapi_permission"}],"uuid":"f434073494f24b49b7ae50ac16847897"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"41bfcd9c28c74b828d855c7a4dde949e","collectionName":"strapi_permission","type":"collection"}

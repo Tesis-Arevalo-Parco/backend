@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "safeguards",
+  "info": {
+    "name": "Safeguards"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "safeguard_code": {
+      "type": "string"
+    },
+    "safeguard_name": {
+      "type": "string"
+    },
+    "safeguard_type": {
+      "type": "string"
+    },
+    "treath_list": {
+      "type": "json"
+    },
+    "safeguard_description": {
+      "type": "string"
+    },
+    "proyecto": {
+      "via": "safeguards",
+      "model": "projects"
+    }
+  }
+}

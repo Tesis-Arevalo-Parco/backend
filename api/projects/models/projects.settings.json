@@ -25,12 +25,16 @@
       "via": "projects"
     },
     "assets": {
-      "via": "project",
-      "collection": "assets"
+      "collection": "assets",
+      "via": "project"
     },
     "dependency": {
       "model": "dependencies",
       "via": "project"
+    },
+    "safeguards": {
+      "collection": "safeguards",
+      "via": "proyecto"
     }
   }
 }

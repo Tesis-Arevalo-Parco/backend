@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.test2"}],"uuid":"bb5d43e62d864f62b0eee00036221c76"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"c0cbed4f7fac4adfb70c3b2f494dfca8","collectionName":"test2","type":"collection"}

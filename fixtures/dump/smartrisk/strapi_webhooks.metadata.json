@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.strapi_webhooks"}],"uuid":"6db1a446244148be8ed3f40a1d6d3d8d"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"10d1bd5b431b4753802d1b368fc34ecd","collectionName":"strapi_webhooks","type":"collection"}

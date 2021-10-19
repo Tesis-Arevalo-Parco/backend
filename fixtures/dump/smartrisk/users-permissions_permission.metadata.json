@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.users-permissions_permission"}],"uuid":"3fd8b9e105a44ffbaaea860b4bd578fa"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"9ad4837446384889a091e90961f4deee","collectionName":"users-permissions_permission","type":"collection"}
