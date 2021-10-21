@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "safeguards",
   "info": {
-    "name": "Safeguards"
+    "name": "Safeguards",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -25,9 +26,9 @@
     "safeguard_description": {
       "type": "string"
     },
-    "proyecto": {
-      "via": "safeguards",
-      "model": "projects"
+    "project": {
+      "model": "projects",
+      "via": "safeguards"
     }
   }
 }
