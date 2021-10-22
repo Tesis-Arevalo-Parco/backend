@@ -32,6 +32,10 @@
       "model": "dependencies",
       "via": "project"
     },
+    "threat": {
+      "via": "project",
+      "collection": "threats"
+    },
     "safeguards": {
       "via": "project",
       "collection": "safeguards"
