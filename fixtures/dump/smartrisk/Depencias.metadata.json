@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.Depencias"}],"uuid":"a88e886ef16040349194fb4afd41b931"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"18bc90e4d8bd4d188c324b54d024072c","collectionName":"Depencias","type":"collection"}
