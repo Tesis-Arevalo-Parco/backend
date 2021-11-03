@@ -19,7 +19,10 @@ module.exports = {
       },
       {
         path: "dependency",
-      }
+      },
+      {
+        path: "safeguards",
+      },
     ]);
   },
 };
