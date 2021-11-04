@@ -29,6 +29,17 @@
     "project": {
       "model": "projects",
       "via": "safeguards"
+    },
+    "effectiveness_against_impact": {
+      "type": "decimal",
+      "default": 0
+    },
+    "effectiveness_against_probability": {
+      "type": "decimal",
+      "default": 0
+    },
+    "total_effectiveness": {
+      "type": "decimal"
     }
   }
 }
