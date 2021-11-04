@@ -21,8 +21,8 @@
       "type": "string"
     },
     "project": {
-      "model": "projects",
-      "via": "assets"
+      "via": "assets",
+      "model": "projects"
     },
     "classType": {
       "type": "json"

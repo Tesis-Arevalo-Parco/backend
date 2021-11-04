@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/safeguards",
+      "handler": "safeguards.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safeguards/count",
+      "handler": "safeguards.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/safeguards/:id",
+      "handler": "safeguards.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/safeguards",
+      "handler": "safeguards.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/safeguards/:id",
+      "handler": "safeguards.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/safeguards/:id",
+      "handler": "safeguards.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

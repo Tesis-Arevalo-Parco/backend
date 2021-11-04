@@ -25,8 +25,8 @@
       "via": "projects"
     },
     "assets": {
-      "via": "project",
-      "collection": "assets"
+      "collection": "assets",
+      "via": "project"
     },
     "dependency": {
       "model": "dependencies",
@@ -35,6 +35,10 @@
     "threat": {
       "via": "project",
       "collection": "threats"
+    },
+    "safeguards": {
+      "via": "project",
+      "collection": "safeguards"
     }
   }
 }
