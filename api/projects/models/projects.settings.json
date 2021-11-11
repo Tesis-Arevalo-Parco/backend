@@ -33,8 +33,17 @@
       "via": "project"
     },
     "threat": {
-      "via": "project",
-      "collection": "threats"
+      "collection": "threats",
+      "via": "project"
+    },
+    "date_project": {
+      "type": "date"
+    },
+    "security_manager": {
+      "type": "string"
+    },
+    "code_project": {
+      "type": "string"
     }
   }
 }

@@ -40,8 +40,8 @@
       "model": "assets"
     },
     "project": {
-      "model": "projects",
-      "via": "threat"
+      "via": "threat",
+      "model": "projects"
     }
   }
 }
