@@ -17,9 +17,6 @@
     "name": {
       "type": "string"
     },
-    "model": {
-      "type": "string"
-    },
     "project": {
       "via": "assets",
       "model": "projects"
@@ -45,6 +42,21 @@
     "threat": {
       "model": "threats",
       "via": "asset"
+    },
+    "person_charge": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "description_asset": {
+      "type": "richtext"
+    },
+    "specific_characteristics": {
+      "type": "richtext"
     }
   }
 }

@@ -39,6 +39,15 @@
     "safeguards": {
       "via": "project",
       "collection": "safeguards"
+    },
+    "date_project": {
+      "type": "date"
+    },
+    "security_manager": {
+      "type": "string"
+    },
+    "code_project": {
+      "type": "string"
     }
   }
 }
