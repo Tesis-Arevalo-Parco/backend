@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/safeguards-threats-risk/:id",
+      "handler": "safeguards.findSafeguardThreatsRisk",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
