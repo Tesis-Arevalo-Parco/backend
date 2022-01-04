@@ -9,4 +9,8 @@ module.exports = {
     const { id } = ctx.params;
     return await strapi.services.safeguards.findSafeguardThreats(id);
   },
+  async findSafeguardThreatsRisk(ctx) {
+    const { id } = ctx.params;
+    return await strapi.services.safeguards.findSafeguardThreatsRisk(id);
+  }
 };
