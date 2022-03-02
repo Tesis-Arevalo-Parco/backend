@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.dependencies"}],"uuid":"d6ac2a7c916b4231a73d779143b332f1"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"3d2ebe09adf046d28695cd74dd99d83c","collectionName":"dependencies","type":"collection"}

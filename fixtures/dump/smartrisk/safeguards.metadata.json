@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.safeguards"}],"uuid":"af2b9adc28504f8d92b63fa0b6453bbe"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"f98eb1f8acdf4c16a07350906572288e","collectionName":"safeguards","type":"collection"}

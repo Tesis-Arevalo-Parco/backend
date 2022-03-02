@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.threats"}],"uuid":"c04721da39a0487ca2b8822f6aa5064f"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"e5ca7d36ba534e9b9aed0e8136fbe37f","collectionName":"threats","type":"collection"}

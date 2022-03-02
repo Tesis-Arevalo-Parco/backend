@@ -1,1 +1,1 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"smartrisk.Salvaguardas"}],"uuid":"7eae5f8ab9dd4b95ad2ebc4b84ec74df"}
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"80ac717c97bb47d2b7787b8b9ea9110c","collectionName":"salvaguardas","type":"collection"}
