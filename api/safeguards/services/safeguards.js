@@ -186,26 +186,34 @@ module.exports = {
 
 const buildSafeguardData = (safeguards) => {
   const threatsListWithSafeguard = [];
-  safeguards?.forEach((safeguard) => {
-    return safeguard?.treath_list?.forEach((threat) => {
-      const isThreatInList = threatsListWithSafeguard?.findIndex(
-        (threatInList) => threatInList?.key === threat?.treath_code
-      );
-      if (isThreatInList === -1) {
-        threatsListWithSafeguard.push({
-          key: threat.treath_code,
-          ei: safeguard.effectiveness_against_impact,
-          ef: safeguard.effectiveness_against_probability,
+  const tempList = [];
+  safeguards.forEach((safeguard) => {
+    safeguard?.treath_list?.forEach((threat) => {
+      const findValue = tempList?.findIndex((item) => item.key === threat?.treath_code)
+      if(findValue !== -1){
+        tempList[findValue].ei.push(safeguard?.effectiveness_against_impact);
+        tempList[findValue].ef.push(safeguard?.effectiveness_against_probability);
+      }else {
+        tempList.push({
+          key: threat?.treath_code,
+          name: threat?.treath_name,
+          ei: [safeguard?.effectiveness_against_impact],
+          ef: [safeguard?.effectiveness_against_probability],
         });
-      } else {
-        const threatInList = threatsListWithSafeguard[isThreatInList];
-        threatInList.ei =
-          (safeguard.effectiveness_against_impact + threatInList.ei) / 2;
-        threatInList.ef =
-          (safeguard.effectiveness_against_probability + threatInList.ef) / 2;
       }
+    })
+  })
+  tempList?.forEach((threat) => {
+    const effectiveness_against_impact = threat?.ei?.reduce((a, b) => a + b, 0) / threat?.ei?.length;
+    const effectiveness_against_probability = threat?.ef?.reduce((a, b) => a + b, 0) / threat?.ef?.length;
+    threatsListWithSafeguard.push({
+      key: threat?.key,
+      name: threat?.name,
+      ei: effectiveness_against_impact,
+      ef: effectiveness_against_probability,
     });
-  });
+  })
+
   return threatsListWithSafeguard;
 };
 
@@ -215,7 +223,7 @@ const valueData = (threat, key, valueKey, safeguardsData) => {
   );
   const threatDataF = threat[valueKey]?.find((item) => item?.keyValue === key);
   if (isThreatInList && valueKey !== DATA_ASSETS_VALUE.probability.value) {
-    const ei = isThreatInList?.ei / 100;
+    const ei = (isThreatInList?.ei / 100).toFixed(2);
     const partialValue = threatDataF?.value * ei;
     const result = Math.abs(threatDataF?.value) - Math.abs(partialValue);
     return Math.abs(result) > 0 ? Math.abs(result).toFixed(2) : "";
@@ -223,7 +231,8 @@ const valueData = (threat, key, valueKey, safeguardsData) => {
     isThreatInList &&
     valueKey === DATA_ASSETS_VALUE.probability.value
   ) {
-    const ef = isThreatInList?.ef;
+    console.log(isThreatInList?.ef,threatDataF?.value);
+    const ef = (isThreatInList?.ef / 100).toFixed(2);
     const partialValue = Math.abs(threatDataF?.value * ef);
     const result = Math.abs(threatDataF?.value) - Math.abs(partialValue);
     return Math.abs(result) > 0 ? Math.abs(result).toFixed(2) : "";
@@ -232,7 +241,6 @@ const valueData = (threat, key, valueKey, safeguardsData) => {
 };
 
 const calculoImpacto = (valorActivo, valorDegradacion) => {
-  console.log({ valorActivo, valorDegradacion });
   let valorX = -1;
   let valorY = -1;
 
@@ -277,14 +285,6 @@ const valueDataWithSafeguards = (
     threatDataF &&
     assetValueA?.value
   ) {
-    console.log({
-      threat,
-      key,
-      valueKey,
-      data,
-      threatDataF,
-      assetValueA,
-    });
     return calculoImpacto(+assetValueA.value, +threatDataF);
   } else if (
     valueKey === DATA_ASSETS_VALUE.integrity.value &&
